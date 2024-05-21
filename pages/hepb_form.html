@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Description" content="Dynamic web development"> 
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Project </title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <section class="row">
+        <header class="header">
+            <h1>class Project</h1>
+            <nav class="topnav">
+              <a href="../index.html">Home</a>
+              <a href="#">About</a>
+            </nav>
+        </header>
+    </section>
+
+    <section class="row">
+        
+        <div class="heading">
+         <h1>Hepatitis B Infected Pregnant Woman Reporting Form</h1>   
+         <h3>Massachusetts Department of Public Health
+            Bureau of Infectious Disease and
+            Laboratory Sciences</h3>
+         <p>305 South Street, Room 563, Jamaica Plain, MA 02130
+            Phone: 617-983-6800 Confidential Fax: 617-983-6220</p>
+        
+            <div class="sur-date">
+            <label for="surdate">Received in Surveillance:</label>
+            <input type="date" name="surdate" id="surdate">
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+    <div class="formContainer">
+        <div class="col-3">
+            <nav class="sidenav">
+                <div><a href="sti_form.html">sti_form</a></div>
+                <div><a href="hepb_form.html">Hepb_form</a></div>
+                <div><a href="cong_syphilis.html">cong_syphilis</a></div>
+                <div><a href="registration.html">Registration.html</a></div>
+                <div><a href="riskfactor.html">Riskfactor.html</a></div>
+                <div><a href="personalinfo.html">Personalinfo.html</a></div>
+                
+            </nav>
+        </div>
+
+        <div class="col-9">
+            <h1 class="title">Confidential Case Report</h1> 
+            <form action="../index.html" method="post" target="_self" autocomplete="off">
+                             
+                <table class="form-table">
+                <tr>
+                    <td><label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname">
+
+                    <label for="middlename"> Middle Name</label>
+                    <input type="text" name="middlename" id="middlename">
+                
+                    <label for="lastname"> Last Name</label></th>
+                    <input type="text" name="lastname" id="lastname">
+                    </td>
+
+                    <td><label for="dobh">Date of Birth: <i><small>(mm/dd/yyyy)</small></i> </birth:i></label>
+                        <input type="date" name="dobh" id="dobh">
+                    </td>
+
+                    <td><label for="edd">Estimated Delivery Date</label>
+                        <input type="date" name="edd" id="edd">
+                    </td>
+
+                    <td><label>Patient aware of HepB+ status?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="pahb" id="pahb-yes">
+                            <label for="pahb-yes"></label> Yes
+                            <input type="radio" name="pahb" id="pahb-no">
+                            <label for="pahb-no"></label> No
+                            <input type="radio" name="pahb" id="pahb-unk">
+                            <label for="pahb-unk"></label> Unk
+                    </div>
+                    </td>
+
+                    <td><label for="add">Address: </label>
+                        <input type="text" name="add" id="add">
+                    </td>
+
+                    <td><label for="city">City: </label>
+                        <input type="text" name="city" id="city">
+                    </td>
+
+                    <td><label for="state">State:</label>
+                        <input type="text" name="state" id="state">
+                    </td>
+
+                    <td><label for="zip"> Zip: </label>
+                        <input type="text" name="zip" id="zip">
+                    </td>
+                    <td>
+                        <label for="phoneno"> Phone No: </label>
+                        <input type="number" name="phoneno" id="phoneno">
+                    </td>
+
+                    <td>
+                        <label for="insurance">Type of Insurance:</label>
+                        <div class="checkbox-group">
+                        <input type="checkbox" name="insurance" id="insurance-private">
+                        <label for="insurance-private">Private</label>
+                        <input type="checkbox" name="insurance" id="insurance-Medicaid">
+                        <label for="insurance-Medicaid">Medicaid</label>
+                        <input type="checkbox" name="insurance" id="insurance-Medicare">
+                        <label for="insurance-Medicare ">Medicare</label>
+                        <input type="checkbox" name="insurance" id="insurance-Uninsured">
+                        <label for="insurance-Uninsured">Uninsured</label>
+                        <input type="checkbox" name="insurance" id="insurance-unknown ">
+                        <label for="insurance-unknown">Unknown</label></td>
+                        </div>
+                    </td>
+
+                    <td>
+                        <label for="race"> Race: </label>
+                        <select name="race" id="race" required>
+                        <option selected disabled>Select One</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="asian">Asian</option>
+                        <option value="AmericanIndian">American Indian</option>
+                        <option value="">Alaskan</option>
+                        <option value="">Pacific Islander</option>
+                        <option value="">Unknown</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <label for="hispanic">Hispanic:</label>
+                        <div class="checkbox-group">
+                        <input type="checkbox" name="hispanic" id="hispanic-yes">
+                        <label for="hispanic-yes">Yes</label>
+                        <input type="checkbox" name="hispanic" id="hispanic-no">
+                        <label for="hispanic-no">No</label>
+                        <input type="checkbox" name="hispanic" id="hispanic-unk">
+                        <label for="hispanic-unk">Unknown</label>
+                        </div>
+                    </td>
+
+                    <td>
+                        <label for="birthcountry">Country of Birth: </label>
+                        <input type="text" name="birthcountry" id="birthcountry">
+                    </td>
+
+                    <td>
+                        <label for="prilang">Primary Language:</label>
+                        <input type="text" name="prilang" id="prilang">
+                        <div class="checkbox-group"><input type="checkbox" name="" id="" value=""> Check if Interpreter Needed</div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>LABORATORY INFORMATION</label></td>
+                </tr>
+
+                <tr>           
+                    <td><label>Laboratory Results: Check off below any POSITIVE labs and attach positive Hep B lab results</label>
+                    <div class="">    
+                        <label for="HBsAg"></label>
+                        <input type="checkbox" name="HBsAg" id="HBsAg">HBsAg (Hep B surface antigen)
+                        <label for="HBeAg"></label>
+                        <input type="checkbox" name="HBsAg" id="HBeAg">HBeAg (Hep Be antigen)
+                        <label for="Igm"></label>
+                        <input type="checkbox" name="HBsAg" id="Igm">IgM anti-HBc (IgM antibody to Hep B core antigen)
+                        <label for="HBV"></label>
+                        <input type="checkbox" name="HBsAg" id="HBV">HBV DNA (Hep B virus DNA)
+                    </div>
+                    </td> 
+                    
+                <tr>
+                    <td><label>CLINICAL INFORMATION</label></td>
+                </tr>
+              
+                <tr>
+                    <td><label for="p-ln"></label>OB Provider Last Name:
+                        <input type="text" name="p-ln" id="p-ln">
+                    </td>
+
+                    <td><label for="p-fn">OB Provider First Name:</label>
+                        <input type="text" name="p-fn" id="p-fn">
+                    </td>
+                    <td><label>Provider Type</label>
+                        <div class="checkbox-group">
+                        <label for="pt-MDDO"></label>MD/DO   
+                        <input type="checkbox" name="ptype" id="pt-MDDO">
+                        <label for="pt-CNMNP"></label>CNM/NP
+                        <input type="checkbox" name="ptype" id="pt-CNMNP">
+                        <label for="pt-PA"></label>PA
+                        <input type="checkbox" name="ptype" id="pt-PA">
+                        </div>
+                    </td>
+
+                    <td><label for="edf">Expected Delivery Facility:</label>
+                        <input type="text" name="edf" id="edf">
+                    </td>
+                    <td><label for="rhcf">Reporting Health Care Facility:</label>
+                        <input type="text" name="rhcf" id="rhcf">
+                    </td>
+                    <td><label for="c-add">Address: </label>
+                        <td><input type="text" name="c-add" id="c-add">
+                    </td>
+
+                    <td><label for="c-city">City: </label>
+                        <input type="text" name="c-city" id="c-city">
+                    </td>
+
+                    <td><label for="c-state">State:</label>
+                        <input type="text" name="c-state" id="c-state">
+                    </td>
+
+                    <td><label for="c-zip"> Zip: </label>
+                        <input type="text" name="c-zip" id="c-zip">
+                    </td>
+
+                    <td><label for="cprf">Contact Person at Reporting Facility:</label>
+                        <input type="text" name="cprf" id="cprf">
+                    </td>
+                    <td><label for="cppn">Contact Person Phone No:</label>
+                        <input type="number" name="cppn" id="cppn">
+                    </td>
+                    
+                    <td><label for="dfc">Date Form Completed:</label>
+                        <input type="date" name="dfc" id="dfc">
+                    </td>
+
+                    <td>
+                        <div class="checkbox"><input type="checkbox" name="poslab" id="poslab">
+                        <label for="poslab">Positive Labs Attached</label>
+                        </div>
+                    </td>
+
+
+                </tr>
+                </table>
+
+                <div>
+                    <button type="submit" class="btn"> Submit </button>
+    
+                </div>
+ 
+            </form>
+    
+            
+        </div>
+
+    </div>
+    </section>
+
+
+    <section class="row">
+        <footer class="footer">
+            <div>
+            <p>&copy; frontend class project. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

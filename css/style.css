@@ -1,0 +1,495 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#eee ;
+}
+
+/* grid rows */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+/*style for mobile first*/
+[class*="col-"]{
+    width: 100%;
+}
+
+/* Define column widths using media queries */
+@media only screen and (min-width: 600px) {
+    .col-1 { width: 8.33%; }
+    .col-2 { width: 16.66%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.33%; }
+    .col-5 { width: 41.66%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.33%; }
+    .col-8 { width: 66.66%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
+}
+
+/*header syles*/
+.header{
+    max-width: 100%;
+    height: 100px;
+    background-color: #a4a7aa;
+    margin: 0 auto;
+    padding: 10px;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header h1{
+text-align: center;
+text-transform: capitalize;
+font: italic bold;
+color: rgb(38, 38, 241);
+}
+
+.header a{
+    text-decoration: none;
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    color: rgba(18, 18, 238, 0.5);
+}
+
+.header a:link{
+    color: #4a7ae1;
+}
+
+.header a:visited{color: rgba(18, 18, 238, 0.5);}
+
+.header a:hover{
+    background-color: #63686d;
+    color: #fff;
+}
+
+.header a:active{
+    background-color: black;
+    color: #7c9ada;
+}
+
+/* page heading style*/
+.heading{
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+    /*position: relative;
+    top: 100px;*/
+
+}
+
+/*.formContainer{
+    position: relative;
+    top: 100px ;
+
+}*/
+
+/*side nav styles*/
+.sidenav{
+max-width: auto;
+height: 100%;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 5px;
+border-radius: 10px;
+/*margin-top: 40px;*/
+}
+.sidenav div{
+   /*background-color: #4a7ae1;*/
+    border-radius: 10px;
+    background-color: #86888a;
+    box-shadow: 2px 2px 10px 0 #63686d ;
+}
+.sidenav a{
+    display: block;
+    text-decoration: none;
+    float: left;
+    margin: 5px;
+}
+
+.sidenav a:link{ 
+    color: red;
+    
+}
+.sidenav a:visited{
+    color: #3c0404;
+}
+
+.sidenav a:hover{
+    background-color: #4a7ae1;
+    color: #a5acb4;
+    border-radius: 6px;
+    height: 30px;
+    padding: 5px;
+    width: 80%;
+}
+
+
+/* style for login form*/
+.container{
+    margin: auto;
+    max-width: 90%;
+    width: 800px;
+}
+   
+.container form{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: #e8eff5;
+    box-shadow: 2px 2px 10px 0 #63686d; 
+    margin: 10px;
+    padding: 20px;
+    
+
+}
+
+.container form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container form div{
+    margin-bottom: 20px;
+    
+}
+
+.container form label{
+    float: left;
+    width: 200px;
+    font-size: 20px;
+    
+}
+
+.container form select{
+    width: 100%;
+    background-color: #ccc;
+    
+}
+
+.container form input{
+    border-radius: 4px;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    background-color: #ccc;
+    /*color: #fff;*/
+}
+
+.container input[type="radio"]{
+    width: 20px;
+}
+
+.container .gender{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.gender input{
+    background-color: #ccc;
+}
+.container .gender label{
+    width: auto;
+    
+}
+.rem-me label{
+    margin: auto;
+    
+}
+
+.container .rem-me label{
+    display: inline;
+    
+}
+
+.container .rem-me input{
+    width: 100px;
+    height: 10px;
+    margin: 2px;
+}
+
+.container .btn{
+    margin-top: 40px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+}
+
+.container .btn button{
+    cursor: pointer;
+    width: 100px;
+    background-color: #ccc;
+    border: 2px solid;
+    border-radius: 5px;
+    color: #63686d;
+    height: 40px;
+    padding: 5px;
+    
+}
+
+.container .Register{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+    
+}
+
+/*footer style*/
+.footer{
+    background-color: #63686d;
+    max-width: 100%;
+    height: 100px;
+    background-color: #a4a7aa;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    top: 110px;
+}
+
+/*table styles*/
+
+.first-table{
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ .first-table th, .first-table td{
+    padding: 10px;
+ } 
+
+ .first-table label{
+    font-weight: bold;
+ }
+
+ .first-table input{
+    width: 200px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .form-table th, .form-table td {
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  .form-table th {
+    text-align: left;
+  }
+
+  .form-table td {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-table label {
+    margin-bottom: 5px;
+  }
+
+  .form-table input, textarea, select{
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .form-table input[type="text"],
+  .form-table input[type="date"],
+  .form-table input[type="tel"],
+  .form-table input[type="number"],
+  .form-table textarea,
+  .form-table select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-table .checkbox-group,
+  .form-table .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .form-table .checkbox-group label,
+  .form-table .radio-group label {
+    margin-right: 10px;
+  }
+
+  .form-table p {
+    margin: 5px 0;
+}
+
+
+/* page heading style*/
+.heading{
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+
+}
+
+/*.sec-heading{
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+}*/
+
+.sur-date{
+    margin-top: 30px;
+    float: right;
+}
+
+.sur-date label{
+    font-weight: bold;
+    font-style: italic;
+ }
+
+.sur-date input{
+    border-radius: 5px;
+    
+    padding: 3px;
+    background-color: #a5acb4;
+    color: #165aec;
+}
+
+.instruction{
+ margin-top: 10px;
+ border: 2px solid rgb(46, 44, 44);
+ padding: 10px;
+ border-radius: 5px;
+ }
+
+
+ .title{
+    /*text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;*/
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin: 5px;
+    padding-bottom: 10px;
+    color: #4a7ae1;
+}  
+
+.congForm-container{
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+
+} 
+
+.congForm-container h1{ 
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin: 5px;
+    padding-bottom: 10px;
+    color: #4a7ae1;
+}
+.congForm-container fieldset{
+    margin: 2em 0;
+    padding: 1em 2em;
+    min-width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.congForm-container, div{
+    padding-right: 10px;
+    
+}
+
+.congForm-container legend{
+    text-align: center;
+    font: 22px italic;
+}
+
+.congForm-container label{
+  display: block;
+  margin-top: 10px;  
+}
+
+.congForm-container input{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 30px;
+    
+}
+
+/*.congForm-container form input[text="text"], 
+.congForm-container form input[text="date"],
+.congForm-container form input[text="tel"],
+.congForm-container input[text="number"],*/
+.congForm-container select{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 30px;
+    
+}
+
+.congForm-container .checkbox-group {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    flex-direction: column;
+  }
+  
+  .checkbox-group label {
+    margin-right: 5px; /* Adjust spacing between label and checkbox */
+  }
+
+
+.btn{
+    background-color: #165aec;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}

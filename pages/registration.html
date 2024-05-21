@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Description" content="Dynamic web development"> 
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Project </title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <section class="row">
+        <header class="header">
+            <h1>class Project</h1>
+            <nav class="topnav">
+              <a href="../index.html">Home</a>
+              <a style="float: left;" href="registration.html">Register New Client</a>
+              <a href="#">About</a>
+            </nav>
+        </header>
+    </section>
+
+    <section class="row">
+
+        <div class="col-3">
+            <nav class="sidenav">
+                <div><a href="sti_form.html">sti_form</a></div>
+                <div><a href="hepb_form.html">Hepb_form</a></div>
+                <div><a href="cong_syphilis.html">cong_syphilis</a></div>
+                <div><a href="registration.html">Registration.html</a></div>
+                <div><a href="riskfactor.html">Riskfactor.html</a></div>
+                <div><a href="personalinfo.html">Personalinfo.html</a></div>
+                
+            </nav>
+        </div>
+
+        <div class="col-9">
+            <div class="container">
+            <form action="#" method="post" target="_self" autocomplete="off">
+                <div>
+                    <h1> Register </h1>
+                    <p><i>Kindly fill this form to <b>create an account</b></i></p>
+                </div>
+                <div>
+                    <label for="username"> Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your fullname">
+                </div>
+                <div>
+                    <label for="Unique_no">Unique No</label>
+                    <input type="password" name="Unique_no" id="Unique_no" required placeholder="Enter your Uniqueid no">
+                </div>
+               
+                <div>
+                    <label for="gender">Gender Identity:</label>
+                    <select id="gender" name="gender">
+                      <option selected disabled>[select one]</option>
+                      <option value="male"> Male</option>
+                      <option value="female">Female</option>
+                      <option value="non-binary">Non-binary</option>
+                      <option value="transgender">Transgender</option>
+                      <option value="other">Other</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="sexualorientation">Sexual Orientation:</label>
+                    <select name="sexualorientation" id="sexualorientation">
+                        <option selected disabled>[select one]</option>
+                        <option value="Heterosexual">Heterosexual</option>
+                        <option value="Homosexua">Homosexua</option>
+                        <option value="Bisexual">Bisexual</option>
+                        <option value="Pansexual">Pansexual</option>
+                        <option value="Asexual">Asexual</option>
+                        <option value="Demisexual">Demisexual</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="dob"> date of birth </label>
+                    <input type="number" name="dob" id="dob" min="1900" max="2200">
+                </div>
+                <div class="gender">
+                   <div><label for="sex">Sex: </label></div> 
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" name="sex" id="female"required>
+                    
+                </div>
+                
+
+                <div>
+                 <button type="submit" class="btn"  class="btn"> <a href="personalinfo.html"> Save and Submit</a> </button>
+
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <footer class="footer">
+            <div>
+            <p>&copy; frontend class project. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

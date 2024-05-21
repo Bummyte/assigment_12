@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Description" content="Dynamic web development"> 
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Project </title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <section class="row">
+        <header class="header">
+            <h1>class Project</h1>
+            <nav class="topnav">
+              <a style="float: left;" href="registration.html">Register New Client</a>
+              <a href="../index.html">Home</a>
+              <a href="#">About</a>
+            </nav>
+        </header>
+    </section>
+
+    <section class="row">
+    <div >
+        <div class="col-3">
+            <nav class="sidenav">
+                <div><a href="sti_form.html">sti_form</a></div>
+                <div><a href="hepb_form.html">Hepb_form</a></div>
+                <div><a href="cong_syphilis.html">cong_syphilis</a></div>
+                <div><a href="registration.html">Registration.html</a></div>
+                <div><a href="riskfactor.html">Riskfactor.html</a></div>
+                <div><a href="personalinfo.html">Personalinfo.html</a></div>
+                
+            </nav>
+        </div>
+
+        <div class="col-9">
+            <article class="container">
+            <form action="hepb_form.html" method="post" target="_self">
+                <div>
+                    <h1>Personal Information </h1>
+                    <p>Kindly fill in your information <i>here</i></p>
+                </div>
+                <div>
+                    <label for="fname"> First Name</label>
+                    <input type="text" name="fname" id="fname">
+                </div>
+                
+                <div>
+                    <label for="mname">Middle Name</label>
+                    <input type="text" id="mname" name="mname">
+                </div>
+                <div>
+                    <label for="lname"> Last Name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div>
+                    <label for="username"> Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your fullname">
+                </div>
+                <div>
+                    <label for="Unique_no">Unique NO</label>
+                    <input type="password" name="Unique_no" id="Unique_no" required placeholder="Enter your Uniqueid no">
+                </div>
+                <div class="gender">
+                    <label>Sex</label>
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" name="sex" id="female"required>
+                   
+                </div>
+                <div>
+                    <label for="gender">Gender Identity:</label>
+                    <select id="gender" name="gender">
+                      <option selected disabled>[select one]</option>
+                      <option value="male"> Male</option>
+                      <option value="female">Female</option>
+                      <option value="non-binary">Non-binary</option>
+                      <option value="transgender">Transgender</option>
+                      <option value="other">Other</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="sexualorientation">Sexual Orientation:</label>
+                    <select name="sexualorientation" id="sexualorientation">
+                        <option selected disabled>[select one]</option>
+                        <option value="Heterosexual">Heterosexual</option>
+                        <option value="Homosexua">Homosexua</option>
+                        <option value="Bisexual">Bisexual</option>
+                        <option value="Pansexual">Pansexual</option>
+                        <option value="Asexual">Asexual</option>
+                        <option value="Demisexual">Demisexual</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="dob"> date of birth </label>
+                    <input type="number" name="dob" id="dob" min="1900" max="2200">
+                </div>
+
+                <div >
+                 <button type="submit" class="btn"> Submit </button>
+
+                </div>
+            </form>
+            </article>
+        </div>
+    </div>
+    </section>
+    
+    <footer class="footer">
+        <div>
+        <p>&copy; frontend class project. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
