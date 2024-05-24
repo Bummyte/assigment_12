@@ -11,6 +11,7 @@
     <section class="row">
         <header class="header">
             <h1>class Project</h1>
+            <h1> Case Reporting Forms </h1>
             <nav class="topnav">
               <a href="../index.html">Home</a>
               <a href="#">About</a>
@@ -46,7 +47,7 @@
     
             
             <div class="col-9">
-                <div class="congForm-container">
+                <div class ="congForm-container">
                  <h1>Congenital Syphilis (CS) Case Investigation and Report Form</h1>
                 
                     <form action="#" method="post" target="_self" autocomplete="off">
@@ -188,24 +189,25 @@
 
                     <div class="checkbox-group">
                     <label for="motherRace">13. Mother’s race (check all that apply):</label>
-                    <input type="checkbox" id="americanIndian" name="motherRace" value="americanIndian">
                     <label for="americanIndian">American Indian/Alaska Native</label>
-                    <input type="checkbox" id="black" name="motherRace" value="black">
+                    <input type="checkbox" id="americanIndian" name="motherRace" value="americanIndian">
                     <label for="black">Black or African American</label>
-                    <input type="checkbox" id="asian" name="motherRace" value="asian">
+                    <input type="checkbox" id="black" name="motherRace" value="black">
                     <label for="asian">Asian</label>
-                    <input type="checkbox" id="pacificIslander" name="motherRace" value="pacificIslander">
+                    <input type="checkbox" id="asian" name="motherRace" value="asian">
                     <label for="pacificIslander">Native Hawaiian or Other Pacific Islander</label>
-                    <input type="checkbox" id="white" name="motherRace" value="white">
+                    <input type="checkbox" id="pacificIslander" name="motherRace" value="pacificIslander">
                     <label for="white">White</label>
-                    <input type="checkbox" id="otherRace" name="motherRace" value="other">
+                    <input type="checkbox" id="white" name="motherRace" value="white">
                     <label for="otherRace">Other</label>
-                    <input type="checkbox" id="raceUnknown" name="motherRace" value="unknown">
+                    <input type="checkbox" id="otherRace" name="motherRace" value="other">
                     <label for="raceUnknown">Unknown</label>
+                    <input type="checkbox" id="raceUnknown" name="motherRace" value="unknown">
+                    
                     </div>
 
+                    
                     <div class="checkbox-group">
-                    <div>
                     <label>14. Did mother have non-treponemal or treponemal tests at</label>
                     <label for="firstprenatal">a. First prenatal visit? </label>  
                     <input type="checkbox" name="firstprenatal" id="firstprenatalyes">
@@ -215,7 +217,8 @@
                     <input type="checkbox" name="firstprenatal" id="firstprenatalunk">
                     <label for="firstprenatalunk">Unknown</label>     
                     </div>
-                    <div>
+
+                    <div class="checkbox-group">
                     <label for="weeksgestation">b. 28–32 weeks gestation? </label>  
                     <input type="checkbox" name="weeksgestation" id="weeksgestationyes">
                     <label for="weeksgestationyes">Yes</label>  
@@ -224,7 +227,8 @@
                     <input type="checkbox" name="weeksgestation" id="weeksgestationunk">
                     <label for="weeksgestationunk">Unknown</label> 
                     </div>
-                    <div>
+
+                    <div class="checkbox-group">
                     <label for="trepdeliver">c. delivery?</label>  
                     <input type="checkbox" name="trepdeliver" id="trepdeliveryes">
                     <label for="trepdeliveryes">Yes</label>  
@@ -233,7 +237,7 @@
                     <input type="checkbox" name="trepdeliver" id="trepdeliverunk">
                     <label for="trepdeliverunk">Unknown</label> 
                     </div>
-                    </div>
+                
 
                     <div>
                     <label for="motherMaritalStatus"> 15. Mother’s marital status:</label>
@@ -247,13 +251,14 @@
                     </select>
                     </div>
 
-                    <div>
-                    <label>16. Indicate during pregnancy and delivery, dates and results of a. most recent and b. first non-treponemal tests: </label></div>
-                    <div>
+                  <div>
+                    <label>16. Indicate during pregnancy and delivery, dates and results of a. most recent and b. first non-treponemal tests: </label>
+                    <div class="checkbox-group">
                     <label for="nonTrepDateRecent">a. Most recent non-treponemal test date:</label>
                     <input type="date" id="nonTrepDateRecent" name="nonTrepDateRecent">
                     <input type="checkbox" id="nonTrepDateRecentUnk" name="nonTrepDateRecentUnk">
                     <label for="nonTrepDateRecentUnk">Unknown</label>
+                    </div>
 
                     <label for="nonTreTestType">Most recent non-treponemal test type</label>
                     <select name="nonTreTestType" id="nonTreTestType">
@@ -273,13 +278,15 @@
             
                     <label for="nonTrepTiterRecent">Most recent non-treponemal test titer:</label>
                     <input type="text" id="nonTrepTiterRecent" name="nonTrepTiterRecent">
-                    </div>
+                  
 
-                    <div>
+                  
                     <label for="nonTrepDateFirst">b. First non-treponemal test date:</label>
+                    <div class="checkbox-group">
                     <input type="date" id="nonTrepDateFirst" name="nonTrepDateFirst">
                     <input type="checkbox" id="nonTrepDateFirstUnk" name="nonTrepDateFirstUnk">
                     <label for="nonTrepDateFirstUnk">Unknown</label>
+                    </div>
 
                     <label for="nonTreTestTypeFirst">first non-treponemal test type</label>
                     <select name="nonTreTestTypeFirst" id="nonTreTestTypeFirst">
@@ -299,61 +306,65 @@
         
                     <label for="nonTrepTiterFirst">First non-treponemal test titer:</label>
                     <input type="text" id="nonTrepTiterFirst" name="nonTrepTiterFirst">
-                    </div>
+                  </div>
                     
-                    <div>
-                    <label for="hivStatus"> What was mother's HIV status during pregnancy?</label><br>
+                  
+                    <label for="hivStatus">17. What was mother's HIV status during pregnancy?</label>
+                    <div class="radio-group">
                     <input type="radio" id="hivPositive" name="hivStatus" value="P">
-                    <label for="hivPositive">Positive</label><br>
+                    <label for="hivPositive">Positive</label>
                     <input type="radio" id="hivEquivocal" name="hivStatus" value="E">
-                    <label for="hivEquivocal">Equivocal test</label><br>
+                    <label for="hivEquivocal">Equivocal test</label>
                     <input type="radio" id="hivNotTested" name="hivStatus" value="X">
-                    <label for="hivNotTested">Patient not tested</label><br>
+                    <label for="hivNotTested">Patient not tested</label>
                     <input type="radio" id="hivNegative" name="hivStatus" value="N">
-                    <label for="hivNegative">Negative</label><br>
+                    <label for="hivNegative">Negative</label>
                     <input type="radio" id="hivUnk" name="hivStatus" value="U">
                     <label for="hivUnk">Unknown</label>
                     </div>
             
-                    <div>
-                    <label for="clinicalStage">What clinical stage of syphilis did mother have during pregnancy?</label><br>
+                  <div>
+                    <label for="clinicalStage">What clinical stage of syphilis did mother have during pregnancy?</label>
+                    <div class="radio-group">
                     <input type="radio" id="primary" name="clinicalStage" value="1">
-                    <label for="primary">Primary</label><br>
+                    <label for="primary">Primary</label>
                     <input type="radio" id="secondary" name="clinicalStage" value="2">
-                    <label for="secondary">Secondary</label><br>
+                    <label for="secondary">Secondary</label>
                     <input type="radio" id="earlyLatent" name="clinicalStage" value="3">
-                    <label for="earlyLatent">Early latent</label><br>
+                    <label for="earlyLatent">Early latent</label>
                     <input type="radio" id="lateLatent" name="clinicalStage" value="4">
-                    <label for="lateLatent">Late or late latent</label><br>
+                    <label for="lateLatent">Late or late latent</label>
                     <input type="radio" id="treated" name="clinicalStage" value="5">
-                    <label for="treated">Previously treated/serofast</label><br>
+                    <label for="treated">Previously treated/serofast</label>
                     <input type="radio" id="other" name="clinicalStage" value="8">
-                    <label for="other">Other</label><br>
+                    <label for="other">Other</label>
                     <input type="radio" id="clinicalUnk" name="clinicalStage" value="9">
                     <label for="clinicalUnk">Unknown</label>
-                    </div>
+                  </div>
+                  </fieldset>
             
                        
             
                     <fieldset>
                         <legend>Mother's Syphilis and Treatment Information</legend>
-                        <div>
                         <label for="surveillanceStage">What surveillance stage of syphilis did mother have during pregnancy?</label><br>
+                        <div class="radio-group">
                         <input type="radio" id="surveillancePrimary" name="surveillanceStage" value="1">
-                        <label for="surveillancePrimary">Primary</label><br>
+                        <label for="surveillancePrimary">Primary</label>
                         <input type="radio" id="surveillanceSecondary" name="surveillanceStage" value="2">
-                        <label for="surveillanceSecondary">Secondary</label><br>
+                        <label for="surveillanceSecondary">Secondary</label>
                         <input type="radio" id="surveillanceEarlyLatent" name="surveillanceStage" value="3">
-                        <label for="surveillanceEarlyLatent">Early latent</label><br>
+                        <label for="surveillanceEarlyLatent">Early latent</label>
                         <input type="radio" id="surveillanceLateLatent" name="surveillanceStage" value="4">
-                        <label for="surveillanceLateLatent">Late or late latent</label><br>
+                        <label for="surveillanceLateLatent">Late or late latent</label>
                         <input type="radio" id="surveillanceOther" name="surveillanceStage" value="8">
-                        <label for="surveillanceOther">Other</label><br>
+                        <label for="surveillanceOther">Other</label>
                         <input type="radio" id="surveillanceUnk" name="surveillanceStage" value="9">
                         <label for="surveillanceUnk">Unknown</label>
                         </div>
-                        <div>
+                        
                         <label for="benzathinePenicillin">When did mother receive her first dose of benzathine penicillin?</label>
+                        <div class="radio-group">
                         <label for="penicillinDate">Date</label>
                         <input type="date" id="penicillinDate" name="penicillinDate">    
                         <input type="radio" id="treatmentBeforePregnancy" name="benzathinePenicillin" value="1">
@@ -377,14 +388,15 @@
                             <option value="9">Unknown</option>
                         </select>
                         </div>
-                        <div>
+                        
                         <label for="serologicResponse">Did mother have an appropriate serologic response?</label>
+                        <div class="radio-group">
                         <input type="radio" id="serologicYes" name="serologicResponse" value="1">
                         <label for="serologicYes">Yes, appropriate response</label>
                         <input type="radio" id="serologicNo" name="serologicResponse" value="2">
                         <label for="serologicNo">No, inappropriate response: evidence of treatment failure or reinfection</label>
                         <input type="radio" id="serologicUndetermined" name="serologicResponse" value="3">
-                        <label for="serologicUndetermined">Response could not be determined from available non-treponemal titer information</label><br>
+                        <label for="serologicUndetermined">Response could not be determined from available non-treponemal titer information</label>
                         <input type="radio" id="serologicNotEnoughTime" name="serologicResponse" value="4">
                         <label for="serologicNotEnoughTime">Not enough time for titer to change</label>
                         </div>
@@ -418,140 +430,182 @@
                     <label for="gestationalAge">Estimated gestational age (in weeks):</label>
                     <input type="text" id="gestationalAge" name="gestationalAge">
 
-                    <label for="infantNonTrepTest">Did infant/child have a reactive non-treponemal test for syphilis? (e.g., VDRL, RPR)</label><br>
+                    <label for="infantNonTrepTest">Did infant/child have a reactive non-treponemal test for syphilis? (e.g., VDRL, RPR)</label>
+                    <div class="radio-group">
                     <input type="radio" id="infantNonTrepTestYes" name="infantNonTrepTest" value="1">
-                    <label for="infantNonTrepTestYes">Yes</label><br>
+                    <label for="infantNonTrepTestYes">Yes</label>
                     <input type="radio" id="infantNonTrepTestNo" name="infantNonTrepTest" value="2">
-                    <label for="infantNonTrepTestNo">No</label><br>
+                    <label for="infantNonTrepTestNo">No</label>
                     <input type="radio" id="infantNonTrepTestNoTest" name="infantNonTrepTest" value="3">
-                    <label for="infantNonTrepTestNoTest">No test</label><br>
+                    <label for="infantNonTrepTestNoTest">No test</label>
                     <input type="radio" id="infantNonTrepTestUnk" name="infantNonTrepTest" value="9">
-                    <label for="infantNonTrepTestUnk">Unknown</label><br><br>
+                    <label for="infantNonTrepTestUnk">Unknown</label>
+                    </div>
 
-                    <label for="infantFirstReactiveNonTrepTestDate">When was the infant/child’s first reactive non-treponemal test for syphilis?</label><br>
-                    <input type="date" id="infantFirstReactiveNonTrepTestDate" name="infantFirstReactiveNonTrepTestDate"><br><br>
+                    <label for="infantFirstReactiveNonTrepTestDate">When was the infant/child’s first reactive non-treponemal test for syphilis?</label>
+                    <input type="date" id="infantFirstReactiveNonTrepTestDate" name="infantFirstReactiveNonTrepTestDate">
 
-                    <label for="infantNonTrepTestTiter">Indicate titer of infant/child’s non-treponemal test for syphilis:</label><br>
-                    <input type="text" id="infantNonTrepTestTiter" name="infantNonTrepTestTiter" placeholder="1:xxxx"><br><br>
+                    <label for="infantNonTrepTestTiter">Indicate titer of infant/child’s non-treponemal test for syphilis:</label>
+                    <input type="text" id="infantNonTrepTestTiter" name="infantNonTrepTestTiter">
                 </fieldset>
 
                 <fieldset>
                     <legend>Infant/Child Treponemal Tests</legend>
         
-                    <label for="infantTrepTest">Did infant/child have a reactive treponemal test for syphilis?</label><br>
+                    <label for="infantTrepTest">Did infant/child have a reactive treponemal test for syphilis?</label>
+                    <div class="radio-group">
                     <input type="radio" id="infantTrepTestYes" name="infantTrepTest" value="1">
-                    <label for="infantTrepTestYes">Yes</label><br>
+                    <label for="infantTrepTestYes">Yes</label>
                     <input type="radio" id="infantTrepTestNo" name="infantTrepTest" value="2">
-                    <label for="infantTrepTestNo">No</label><br>
+                    <label for="infantTrepTestNo">No</label>
                     <input type="radio" id="infantTrepTestNoTest" name="infantTrepTest" value="3">
-                    <label for="infantTrepTestNoTest">No test</label><br>
+                    <label for="infantTrepTestNoTest">No test</label>
                     <input type="radio" id="infantTrepTestUnk" name="infantTrepTest" value="9">
-                    <label for="infantTrepTestUnk">Unknown</label><br><br>
+                    <label for="infantTrepTestUnk">Unknown</label>
+                    </div>
         
-                    <label for="infantFirstReactiveTrepTestDate">When was the infant/child’s first reactive treponemal test for syphilis?</label><br>
-                    <input type="date" id="infantFirstReactiveTrepTestDate" name="infantFirstReactiveTrepTestDate"><br><br>
+                    <label for="infantFirstReactiveTrepTestDate">When was the infant/child’s first reactive treponemal test for syphilis?</label>
+                    <input type="date" id="infantFirstReactiveTrepTestDate" name="infantFirstReactiveTrepTestDate">
                 </fieldset>
         
                 <fieldset>
                     <legend>Infant/Child Exam and Signs</legend>
         
-                    <label for="infantDarkfieldExam">Did the infant/child, placenta, or cord have darkfield exam, DFA, or special stains?</label><br>
+                    <label for="infantDarkfieldExam">Did the infant/child, placenta, or cord have darkfield exam, DFA, or special stains?</label>
+                    <div class="radio-group">
                     <input type="radio" id="infantDarkfieldExamPos" name="infantDarkfieldExam" value="1">
-                    <label for="infantDarkfieldExamPos">Yes, positive</label><br>
+                    <label for="infantDarkfieldExamPos">Yes, positive</label>
                     <input type="radio" id="infantDarkfieldExamNeg" name="infantDarkfieldExam" value="2">
-                    <label for="infantDarkfieldExamNeg">Yes, negative</label><br>
+                    <label for="infantDarkfieldExamNeg">Yes, negative</label>
                     <input type="radio" id="infantDarkfieldExamNoTest" name="infantDarkfieldExam" value="3">
-                    <label for="infantDarkfieldExamNoTest">No test</label><br>
+                    <label for="infantDarkfieldExamNoTest">No test</label>
                     <input type="radio" id="infantDarkfieldExamNoLesions" name="infantDarkfieldExam" value="4">
-                    <label for="infantDarkfieldExamNoLesions">No lesions and no tissue to test</label><br>
+                    <label for="infantDarkfieldExamNoLesions">No lesions and no tissue to test</label>
                     <input type="radio" id="infantDarkfieldExamUnk" name="infantDarkfieldExam" value="9">
-                    <label for="infantDarkfieldExamUnk">Unknown</label><br><br>
+                    <label for="infantDarkfieldExamUnk">Unknown</label>
+                    </div>
         
-                    <label for="infantSigns">Did the infant/child have any signs of CS? (check all that apply)</label><br>
+                    <label for="infantSigns">Did the infant/child have any signs of CS? (check all that apply)</label>
+                    <div class="checkbox-group">
                     <input type="checkbox" id="infantNoSigns" name="infantSigns" value="noSigns">
-                    <label for="infantNoSigns">No signs/asymptomatic</label><br>
+                    <label for="infantNoSigns">No signs/asymptomatic</label>
                     <input type="checkbox" id="infantCondylomaLata" name="infantSigns" value="condylomaLata">
-                    <label for="infantCondylomaLata">Condyloma lata</label><br>
+                    <label for="infantCondylomaLata">Condyloma lata</label>
                     <input type="checkbox" id="infantSnuffles" name="infantSigns" value="snuffles">
-                    <label for="infantSnuffles">Snuffles</label><br>
+                    <label for="infantSnuffles">Snuffles</label>
                     <input type="checkbox" id="infantSyphiliticSkinRash" name="infantSigns" value="syphiliticSkinRash">
-                    <label for="infantSyphiliticSkinRash">Syphilitic skin rash</label><br>
+                    <label for="infantSyphiliticSkinRash">Syphilitic skin rash</label>
                     <input type="checkbox" id="infantHepatosplenomegaly" name="infantSigns" value="hepatosplenomegaly">
-                    <label for="infantHepatosplenomegaly">Hepatosplenomegaly</label><br>
+                    <label for="infantHepatosplenomegaly">Hepatosplenomegaly</label>
                     <input type="checkbox" id="infantJaundice" name="infantSigns" value="jaundice">
-                    <label for="infantJaundice">Jaundice/hepatitis</label><br>
+                    <label for="infantJaundice">Jaundice/hepatitis</label>
                     <input type="checkbox" id="infantPseudoparalysis" name="infantSigns" value="pseudoparalysis">
-                    <label for="infantPseudoparalysis">Pseudoparalysis</label><br>
+                    <label for="infantPseudoparalysis">Pseudoparalysis</label>
                     <input type="checkbox" id="infantEdema" name="infantSigns" value="edema">
-                    <label for="infantEdema">Edema</label><br>
+                    <label for="infantEdema">Edema</label>
                     <input type="checkbox" id="infantOther" name="infantSigns" value="other">
-                    <label for="infantOther">Other</label><br>
+                    <label for="infantOther">Other</label>
                     <input type="checkbox" id="infantSignsUnk" name="infantSigns" value="unk">
-                    <label for="infantSignsUnk">Unknown</label><br><br>
+                    <label for="infantSignsUnk">Unknown</label>
+                    </div>
                 </fieldset>
         
                 <fieldset>
                     <legend>Infant/Child Tests and Treatment</legend>
         
-                    <label for="infantXRay">Did the infant/child have long bone X-rays?</label><br>
+                    <label for="infantXRay">Did the infant/child have long bone X-rays?</label>
+                    <div class="radio-group">
                     <input type="radio" id="infantXRayConsistent" name="infantXRay" value="1">
-                    <label for="infantXRayConsistent">Yes, changes consistent with CS</label><br>
+                    <label for="infantXRayConsistent">Yes, changes consistent with CS</label>
                     <input type="radio" id="infantXRayNoSigns" name="infantXRay" value="2">
-                    <label for="infantXRayNoSigns">Yes, no signs of CS</label><br>
+                    <label for="infantXRayNoSigns">Yes, no signs of CS</label>
                     <input type="radio" id="infantXRayNoTest" name="infantXRay" value="3">
-                    <label for="infantXRayNoTest">No X-rays</label><br>
+                    <label for="infantXRayNoTest">No X-rays</label>
                     <input type="radio" id="infantXRayUnk" name="infantXRay" value="9">
-                    <label for="infantXRayUnk">Unknown</label><br><br>
+                    <label for="infantXRayUnk">Unknown</label>
+                    </div>
         
-                    <label for="infantCSF-VDRL">Did the infant/child have a CSF-VDRL?</label><br>
+                    <label for="infantCSF-VDRL">Did the infant/child have a CSF-VDRL?</label>
+                    <div class="radio-group">
                     <input type="radio" id="infantCSF-VDRLReactive" name="infantCSF-VDRL" value="1">
-                    <label for="infantCSF-VDRLReactive">Yes, reactive</label><br>
+                    <label for="infantCSF-VDRLReactive">Yes, reactive</label>
                     <input type="radio" id="infantCSF-VDRLNonreactive" name="infantCSF-VDRL" value="2">
-                    <label for="infantCSF-VDRLNonreactive">Yes, nonreactive</label><br>
+                    <label for="infantCSF-VDRLNonreactive">Yes, nonreactive</label>
                     <input type="radio" id="infantCSF-VDRLNoTest" name="infantCSF-VDRL" value="3">
-                    <label for="infantCSF-VDRLNoTest">No test</label><br>
+                    <label for="infantCSF-VDRLNoTest">No test</label>
                     <input type="radio" id="infantCSF-VDRLUnk" name="infantCSF-VDRL" value="9">
-                    <label for="infantCSF-VDRLUnk">Unknown</label><br><br>
+                    <label for="infantCSF-VDRLUnk">Unknown</label>
+                    </div>
         
-                    <label for="infantCSF-WBC">Did the infant/child have a CSF WBC count or CSF protein test?</label><br>
+                    <label for="infantCSF-WBC">Did the infant/child have a CSF WBC count or CSF protein test?</label>
+                    <div>
                     <input type="radio" id="infantCSF-WBCElevated" name="infantCSF-WBC" value="1">
-                    <label for="infantCSF-WBCElevated">Yes, CSF WBC count elevated</label><br>
+                    <label for="infantCSF-WBCElevated">Yes, CSF WBC count elevated</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantCSF-ProteinElevated" name="infantCSF-WBC" value="2">
-                    <label for="infantCSF-ProteinElevated">Yes, CSF protein elevated</label><br>
+                    <label for="infantCSF-ProteinElevated">Yes, CSF protein elevated</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantCSF-BothElevated" name="infantCSF-WBC" value="3">
-                    <label for="infantCSF-BothElevated">Both tests elevated</label><br>
+                    <label for="infantCSF-BothElevated">Both tests elevated</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantCSF-NeitherElevated" name="infantCSF-WBC" value="4">
-                    <label for="infantCSF-NeitherElevated">Neither test elevated</label><br>
+                    <label for="infantCSF-NeitherElevated">Neither test elevated</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantCSF-NoTest" name="infantCSF-WBC" value="5">
-                    <label for="infantCSF-NoTest">No test</label><br>
+                    <label for="infantCSF-NoTest">No test</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantCSF-Unk" name="infantCSF-WBC" value="9">
-                    <label for="infantCSF-Unk">Unknown</label><br><br>
+                    <label for="infantCSF-Unk">Unknown</label>
+                    </div>
         
-                    <label for="infantTreatment">Was the infant/child treated?</label><br>
+                    <label for="infantTreatment">Was the infant/child treated?</label>
+                    <div >
                     <input type="radio" id="infantTreatmentPenicillin10" name="infantTreatment" value="1">
-                    <label for="infantTreatmentPenicillin10">Yes, with aqueous or procaine penicillin for 10 days</label><br>
+                    <label for="infantTreatmentPenicillin10">Yes, with aqueous or procaine penicillin for 10 days</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantTreatmentPenicillin1" name="infantTreatment" value="3">
-                    <label for="infantTreatmentPenicillin1">Yes, with benzathine penicillin x 1</label><br>
+                    <label for="infantTreatmentPenicillin1">Yes, with benzathine penicillin x 1</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantTreatmentOther" name="infantTreatment" value="4">
-                    <label for="infantTreatmentOther">Yes, with other treatment</label><br>
+                    <label for="infantTreatmentOther">Yes, with other treatment</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantTreatmentNo" name="infantTreatment" value="5">
-                    <label for="infantTreatmentNo">No treatment</label><br>
+                    <label for="infantTreatmentNo">No treatment</label>
+                    </div>
+                    <div>
                     <input type="radio" id="infantTreatmentUnk" name="infantTreatment" value="9">
-                    <label for="infantTreatmentUnk">Unknown</label><br><br>
+                    <label for="infantTreatmentUnk">Unknown</label>
+                    </div>
                 </fieldset>
         
                 <fieldset>
                     <legend>Congenital Syphilis Case Classification</legend>
         
-                    <label for="caseClassification">Classification:</label><br>
+                    <label for="caseClassification">Classification:</label>
+                    <div>
                     <input type="radio" id="caseNotCase" name="caseClassification" value="1">
-                    <label for="caseNotCase">Not a case</label><br>
+                    <label for="caseNotCase">Not a case</label>
+                    </div>
+                    <div>
                     <input type="radio" id="caseConfirmed" name="caseClassification" value="2">
                     <label for="caseConfirmed">Confirmed case (Laboratory confirmed identification of T.pallidum, e.g., darkfield exam, DFA, or special stains)</label><br>
+                    </div>
+                    <div>
                     <input type="radio" id="caseStillbirth" name="caseClassification" value="3">
                     <label for="caseStillbirth">Syphilitic stillbirth (Footnote C)</label><br>
+                    </div>
+                    <div>
                     <input type="radio" id="caseProbable" name="caseClassification" value="4">
-                    <label for="caseProbable">Probable case (A case identified by the algorithm, which is not a confirmed case or syphilitic stillbirth)</label><br><br>
+                    <label for="caseProbable">Probable case (A case identified by the algorithm, which is not a confirmed case or syphilitic stillbirth)</label>
+                    </div>
                 </fieldset>
         
                 <input type="submit" value="Submit">
