@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="Description" content="Dynamic web development"> 
-    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Dynamic web development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Class Project </title>
     <link rel="stylesheet" href="../css/style.css">
+    
 </head>
 <body>
     
     <section class="row">
         <header class="header">
             <h1>class Project</h1>
-            <h1> Case Reporting Forms </h1>
             <nav class="topnav">
               <a href="../index.html">Home</a>
               <a href="#">About</a>
@@ -25,7 +25,7 @@
     </section>
 
     <section class="row">
-    <div class="formContainer">
+     <div class="formContainer">
         <div class="col-3">
             <nav class="sidenav">
                 <div><a href="sti_form.html">sti_form</a></div>
@@ -39,66 +39,80 @@
         </div>
 
        <div class="col-9">
-        <form action="" method="post" autocomplete="off">
-            <div class="title"><h2>Clinic Information</h2></div>
-        <div>
+        <form  method="post" name="stiReporting" onsubmit="return validatestiReporting();" autocomplete="off">
+            <h2 class="title" >Clinic Information</h2> 
+            <div>
             <table class="first-table">
             <tr>
-                <td><label for="sti_date"> Date:</label></td>
-                <td><input type="date" name="sti_date" id="sti_date"></td>
+                <td><label for="stiDate"> Date:</label></td>
+                <td><input type="date" name="stiDate" id="stiDate"><span id="stiDateErr"></span></td>
+                
 
                 <td><label for="hp">Health Provider: </label></td>
-                <td><input type="text" name="hp" id="hp" placeholder="healthcare provider"></td>
+                <td><input type="text" name="hp" id="hp" placeholder="healthcare provider"><span id="hpErr"></span></td>
+                
             </tr>
 
             <tr>
                 <td><label for="pcf">Person Completing Form:</label></td>
                 <td><input type="text" name="pcf" id="pcf"></td>
+                <span id="pcfErr"></span>
 
-                <td><label for="cont-phone">Contact phone number/fax:</label></td>
-                <td><input type="number" name="cont-phone" id="cont-phone"></td>
+                <td><label for="contPhone">Contact phone number/fax:</label></td>
+                <td><input type="number" name="contPhone" id="contPhone"></td>
+                <span id="contPhoneErr"></span>
             </tr>
             </table>
-        </div>
-        <div class="instruction">
+            </div>
+
+            <div class="instruction">
             <p>Your lab reported a communicable disease on the patient shown below and listed you as the provider. The Oregon Department of Human Services and Washington
             County require additional information. The fax cover sheet you have received references Oregon Law (ORS 433) that requires you to report this information.</p>
             <p><b>Please complete the form <u>within 24 hours,</u> or by the end of the next working day, and fax it back to our office at 503-846-3644. </b>
             If you
             prefer you may call to report the required information. We appreciate your cooperation and prompt handling of this confidential report.</p>
-        </div>
+            </div>
 
-        <div><h2>Patient Information — <small><i>Please complete all information requested <b>below.</b></i></small> </h2></div>
-        <table class="form-table">
+            <div><h2>Patient Information — <small><i>Please complete all information requested <b>below.</b></i></small> </h2></div>
+            
+            <table class="form-table">
                 
             <tr>
                 <th>1.</th>
                 <td>
-                    <label for="PName">NAME:</label>
-                    <input type="text" name="PName" id="PName" required>
+                    <label for="stiname">NAME:</label>
+                    <input type="text" name="stiname" id="stiname" required>
+                    <span id="nameErr"></span>
                 </td>
                 <td>
                     <label for="dob">Date of Birth:</label required>
                     <input type="date" name="dob" id="dob" required>
+                    <span id="dobErr"></span>
                 </td>
             
                 <td>
-                    <label for="sti-gender">Gender: </label>
-                <div class="radio-group">
-                    <label for="sti-gender-male">Male</label>
-                    <input type="radio" name="sti-gender" id="sti-gender-male" required>
-                    <label for="sti-gender-female">Female</label>
-                    <input type="radio" name="sti-gender" id="sti-gender-female" required>
-                    <label for="sti-gender-other">Other</label>
-                    <input type="radio" name="sti-gender" id="sti-gender-other" required>
+                    <label>Gender:
+                    <div class="radio-group">
+                    <label for="stiGender-male">Male</label>
+                    <input type="radio" name="stiGender" id="stiGender-male" value="male" required>
+                    </label>
+                    
+                    <label for="stiGender-female">Female</label>
+                    <input type="radio" name="stiGender" id="stiGender-female" value="female" required>
+                    
+                    <label for="stiGender-other">Other</label>
+                    <input type="radio" name="stiGender" id="stiGender-other" value="other" required>
+                    <span id="genderErr"></span>
+                    </div>
                 </td>
+                
             </tr>
         
             <tr>
                 <th>2. </th>
                 <td>
-                    <label for="home-add"> Home Address:</label>
-                    <textarea name="home-add" id="home-add" required></textarea>
+                    <label for="homeAdd"> Home Address:</label>
+                    <textarea name="homeAdd" id="homeAdd" required></textarea>
                 </td>
                 <td>
                     <label for="cityState">City/State</label>
@@ -122,19 +136,19 @@
 
             <tr>
                 <th>3.</th>
-                <td colspan="6">
-                <td>
-                    <label for="testresult">Pregnancy Test Results: </label>
-                <div class="checkbox-group">
+                <td colspan="4">
+                    <label>Pregnancy Test Results: 
+                    <div class="checkbox-group">
                     <label for="testresult-NA">N/A</label>
-                    <input type="checkbox" name="testresult" id="testresult-NA">
+                    <input type="checkbox" name="testresult" id="testresult-NA" value="N/A">
                     <label for="testresult-unk">Unknown</label>
-                    <input type="checkbox" name="testresult" id="testresult-unk">
+                    <input type="checkbox" name="testresult" id="testresult-unk" value="unknown">
                     <label for="testresult-neg">Negative</label>
-                    <input type="checkbox" name="testresult" id="testresult-neg">
+                    <input type="checkbox" name="testresult" id="testresult-neg" value="negative">
                     <label for="testresult-pos">Positive</label>
-                    <input type="checkbox" name="testresult" id="testresult-pos">
-                </div>
+                    <input type="checkbox" name="testresult" id="testresult-pos" value="positive">
+                    </div>
+                    </label>
                     <label for="pos-no"><small><i>If positive how many weeks?</i></small></label>
                     <input type="text" name="testresult" id="pos-no">
                 </td>
@@ -143,44 +157,48 @@
             <tr>
                 <th>4.</th>
                 <td colspan="4">
-                <td><label for="ethnicity"> Ethnicity: </label>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="ethnicity" id="Hispanic" required>
+                    <label>Ethnicity:
+                    <div class="checkbox-group">
+                    <input type="checkbox" name="ethnicity" id="Hispanic" value="hispanic" required>
                     <label for="Hispanic">Hispanic</label>
-                    <input type="checkbox" name="ethnicity" id="non-hispanic" required>
-                    <label for="non-hispanic">Non-Hispanic</label>
-                    <input type="checkbox" name="ethnicity" id="unk-hispanic" required>
+                    <input type="checkbox" name="ethnicity" id="non-hispanic" value="non-hispanic" required>                
+                    <label for="non-hispanic">Non-Hispanic</label>                
+                    <input type="checkbox" name="ethnicity" id="unk-hispanic" value="unknown" required>
                     <label for="unk-hispanic">Unknown</label>
-                </div>
-                </td>
-                <td>
-                    <label for="race"> Race: </label>
-                    <select name="race" id="race" required>
-                    <option selected disabled>Select One</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
-                    <option value="asian">Asian</option>
-                    <option value="AmericanIndian">American Indian</option>
-                    <option value="">Alaskan</option>
-                    <option value="">Pacific Islander</option>
-                    <option value="">Unknown</option>
-                    </select>
-                    <label for="race-others">Others:</label>
-                    <input type="text" name="race-others" id="race-others">
-                </td>
-                
-
+                    <span id="ethnicityErr"></span>                
+                    </div>
+                    </label>
+            </td>
+            <td>
+                <label for="race">Race:
+                <select name="race" id="race" required>
+                <option selected disabled>Select One</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="asian">Asian</option>
+                <option value="AmericanIndian">American Indian</option>
+                <option value="Alaskan">Alaskan</option>
+                <option value="PacificIslander">Pacific Islander</option>
+                <option value="Unknown">Unknown</option>                    
+                </select>
+                <label for="raceothers">Others:</label>
+                <input type="text" name="raceothers" id="raceothers">
+                </label>
+                <span id="raceErr"></span>
+            </td>
                 <td colspan="4">
-                    <label for="sex-partners">Gender of Sex Pertner(s):</label>
-                <div class="checkbox-group">
-                    <label for="sex-partners-male">Male</label>
-                    <input type="checkbox" name="sex-partners" id="sex-partners-male" required>
-                    <label for="sex-partners-female"></label>Female
-                    <input type="checkbox" name="sex-partners" id="sex-partners-female" required>
-                    <label for="sex-partners-both"></label>Both
-                    <input type="checkbox" name="sex-partners" id="sex-partners-both" required>
-                    <label for="sex-partners-unk"></label>Unknown
-                    <input type="checkbox" name="sex-partners" id="sex-partners-unk" required>
+                    <label>Gender of Sex Pertner(s):
+                    <div class="checkbox-group">
+                    <label for="partnersexMale">Male</label>
+                    <input type="checkbox" name="partnersex" id="partnersexMale" value="male" required>
+                    <label for="partnersexFemale">Female</label>
+                    <input type="checkbox" name="partnersex" id="partnersexFemale" value="female" required>
+                    <label for="partnersexBoth">Both</label>
+                    <input type="checkbox" name="partnersex" id="partnersexBoth" value="both" required>
+                    <label for="partnersexUnk">Unknown</label>
+                    <input type="checkbox" name="partnersex" id="partnersexUnk" value="unknown" required>
+                    </label>
+                    <span id="partnersexErr"></span>
                 </div>
                 </td>
             </tr>
@@ -188,41 +206,49 @@
             <tr>
                 <th>5.</th>
                 <td>
-                    <label for="test-result">Test Result Type: </label>
-                </td>
-                <td>
+                    <label>Test Result Type:
                 <div class="checkbox-group">
-                    <label for="Chlamydia-result">Chlamydia Positive Result</label>
-                    <input type="checkbox" name="Chlamydia-result" id="Chlamydia-result" required>
-                    <input type="date" name="Chlamydia-result">
+                    <label for="chlamydiaResult">Chlamydia Positive Result</label>
+                    <input type="checkbox" name="chlamydiaResult" id="chlamydiaResult" required>
                 </div>
+                <div>
+                    <label for="chlamydiaDate">Date of Chlamydia Result (if positive):</label>
+                    <input type="date" name="chlamydiaResult" id="chlamydiaDate" required>
+                    </label>
+                    <span id="chlamydiaResultErr"></span>
+                </div>
+
                 <div class="checkbox-group">
-                    <label for="Gonorrhea-result">Gonorrhea Positive Result</label>
-                    <input type="checkbox" name="Gonorrhea-result" id="Gonorrhea-result" required>
-                    <input type="date" name="Gonorrhea-result">
+                    <label for="gonorrheaResult">Gonorrhea Positive Result</label>
+                    <input type="checkbox" name="gonorrheaResult" id="gonorrheaResult" required>
+                </div>
+                <div>
+                    <label for="gonorrheaaDate">Date of GonorrheaaDate Result (if positive):</label>
+                    <input type="date" name="gonorrheaResult" id="gonorrheaaDate">
+                    <span id="gonorrheaResultErr"></span>
                 </div>
                 </td>
+
                 <td>
-                    <label for="hiv-test">PREVIOUS HIV TESTING:</label>
+                    <label>PREVIOUS HIV TESTING:
+                    <div class="radio-group">
+                    <label for="hivtestyes">Yes</label>
+                    <input type="radio" name="hivtest" id="hivtestyes" value="yes" required>
+                    <label for="hivtestno">No</label>
+                    <input type="radio" name="hi-test" id="hivtestno"  value="no"  required>
+                    <label for="hivtestunk">Unknown</label>
+                    <input type="radio" name="hivtest" id="hivtestunk"  value="unknown"  required>
+                    </div>
+                    </label>
                 </td>
                 <td>
-                <div class="radio-group">
-                    <label for="hiv-test-yes">Yes</label>
-                    <input type="radio" name="hiv-test" id="hiv-test-yes" required>
-                    <label for="hiv-test-no">No</label>
-                    <input type="radio" name="hiv-test" id="hiv-test-no" required>
-                    <label for="hiv-test-unk">Unknown</label>
-                    <input type="radio" name="hiv-test" id="hiv-test-unk" required>
-                </div>
-                </td>
-                <td>
-                    <label for="test-month">Month of last test</label>
-                    <input type="text" name="test-month" id="test-month" required placeholder="Enter last month of test" >
+                    <label for="testmonth">Month of last test</label>
+                    <input type="text" name="testmonth" id="testmonth" required placeholder="Enter last month of test" >
                 </td>
                 
                 <td>
-                    <label for="text-year">Year of last test</label>
-                    <input type="text" name="test-year" id="test-year" required placeholder="Enter lst year of test">
+                    <label for="textyear">Year of last test</label>
+                    <input type="text" name="textyear" id="textyear" required placeholder="Enter lst year of test">
                 </td>
             </tr>
 
@@ -230,8 +256,8 @@
             <tr>
                 <th>6.</th>
                 <td colspan="4">
-                    <label for="reason">REASON FOR EXAM:</label>
-                <div class="checkbox-group">
+                    <label>REASON FOR EXAM:
+                    <div class="checkbox-group">
                     <input type="checkbox" id="symptomatic" name="reason" value="symptomatic" required>
                     <label for="symptomatic">Symptomatic</label>
                     <input type="checkbox" id="routine" name="reason" value="routine" required>
@@ -242,11 +268,14 @@
                     <label for="exposed">Exposed to Infection</label>
                     <input type="checkbox" id="pregnant" name="reason" value="pregnant" required>
                     <label for="pregnant">Pregnant</label>
-                </div>
+                    <span id="reasonErr"></span>
+                    </div>
+                    </label>
+                    
                 </td>
 
                 <td colspan="4">     
-                <label for="diagnosis">DIAGNOSIS:</label>
+                <label>DIAGNOSIS:
                 <div class="checkbox-group">
                     <input type="checkbox" id="asymptomatic" name="diagnosis" value="asymptomatic" required>
                     <label for="asymptomatic">Asymptomatic</label>
@@ -257,12 +286,13 @@
                     <input type="checkbox" id="ophthalmia" name="diagnosis" value="ophthalmia">
                     <label for="ophthalmia">Ophthalmia/Conjunctivitis</label>
                     <input type="checkbox" id="disseminated" name="diagnosis" value="disseminated">
-                    <label for="disseminated">Disseminated</label>
+                    <label for="disseminated">Disseminated</label><span id="diagnosisErr"></span>
                 </div>
+                </label>
                 </td>
                 <td colspan="4">
-                <label for="site">SITE(S):</label>
-                <div class="checkbox-group">
+                    <label>SITE(S):
+                    <div class="checkbox-group">
                     <label for="cervix">Cervix</label>
                     <input type="checkbox" id="cervix" name="site" value="cervix">
                     <label for="ocular">Ocular</label>
@@ -278,8 +308,9 @@
                     <label for="Rectum">Rectum</label>
                     <input type="checkbox" id="Rectum" name="site" value="Rectum">
                     <label for="Other">Other</label>
-                    <input type="checkbox" id="Other" name="site" value="Other"> 
-                </div>               
+                    <input type="checkbox" id="Other" name="site" value="Other"><span id="siteErr"></span>
+                    </div>    
+                    </label>           
                 </td>
             </tr>
 
@@ -287,61 +318,79 @@
             <tr>
                 <th>7.</th>
                 <td colspan="4">
-                <td><label>GONORRHEA TREATMENT PLAN:</label>
+                    <label>GONORRHEA TREATMENT PLAN:
                     <div class="checkbox-group">
                     <input type="checkbox" id="rocephin" name="gonorrhea-treatment" value="rocephin">
                     <label for="rocephin">Rocephin/Ceftriaxone 250mg IM x 1.</label>
-                    <input type="date" id="rocephin-date" name="rocephin-date">
+                    </div>
+                    <div>
+                    <label for="rocephin-date">GONORRHEA TREATMENT date</label>
+                    <input type="date" id="rocephin-date" name="gonorrhea-treatment">
                     </div>
                     <div><p><b>Plus</b></p></div><div>
                     <div class="checkbox-group">
-                    <input type="checkbox" id="azithromycin" name="gonorrhea-treatment" value="azithromycin">
-                    <label for="azithromycin">Azithromycin 1gm orally in a single dose.</label>
+                    <input type="checkbox" id="azithromycinG" name="gonorrhea-treatment">
+                    <label for="azithromycinG">Azithromycin 1gm orally in a single dose.</label>
                     </div>
+                    </label>
+                    
                 </td>
-                <td><label>Alternative Treatment Regimens</label>
+                
+                <td><label>Alternative Treatment Regimens
                     <div class="checkbox-group">
                     <input type="checkbox" id="cefixime" name="gonorrhea-treatment" value="cefixime">
                     <label for="cefixime">Cefixime 400mg orally in a single dose</label>
+                    <label for="cefixime-date"></label>
                     <input type="date" id="cefixime-date" name="cefixime-date">
                     </div>
                     <div><p><b>Plus</b></p></div><div>
                     <div class="checkbox-group">
-                    <input type="checkbox" id="azithromycin" name="gonorrhea-treatment" value="azithromycin">
-                    <label for="azithromycin">Azithromycin 1gm orally in a single dose.</label>    
+                    <input type="checkbox" id="azithromycinAR" name="gonorrhea-treatment" value="azithromycin">
+                    <label for="azithromycinAR">Azithromycin 1gm orally in a single dose.</label>    
                     </div>
+                    </label>
                 </td>
                 <td>
                     <div class="checkbox-group">
                     <input type="checkbox" id="gonorrhea-other" name="gonorrhea-treatment" value="gonorrhea-other">
                     <label for="gonorrhea-other">Other Treatment:</label>
                     </div>
+                    <div>
+                    
+                    <input type="date" id="gonorrhea-other-date" name="gonorrhea-other-date">  
+                    <label for="gonorrhea-other-treatment">(test of cure recommended at 1 month)</label> 
                     <input type="text" id="gonorrhea-other-treatment" name="gonorrhea-other-treatment">
-                    <input type="date" id="gonorrhea-other-date" name="gonorrhea-other-date">
-                    <p>(test of cure recommended at 1 month)</p> 
+                    
+                    </div>
+                    
                 </td>
 
-                <td><label>CHLAMYDIA TREATMENT PLAN:</label>
-                <td>
+                <td><label>CHLAMYDIA TREATMENT PLAN:
+                
                     <div class="checkbox-group">        
                     <input type="checkbox" id="chlamydia-azithromycin" name="chlamydia-treatment" value="azithromycin">
                     <label for="chlamydia-azithromycin">Azithromycin 1gm orally in a single dose</label>
                     </div>
+                    <label for="chlamydia-azithromycin-date">Date:</label>
                     <input type="date" id="chlamydia-azithromycin-date" name="chlamydia-azithromycin-date">
                     <div><p><b>OR</b></p></div><div></div>
                     <div class="checkbox-group">
                     <input type="checkbox" id="chlamydia-doxycycline" name="chlamydia-treatment" value="doxycycline">
                     <label for="chlamydia-doxycycline">Doxycycline 100mg BID x 7 days</label>
                     </div>
+                    <label for="chlamydia-doxycycline-date"> Date</label>
                     <input type="date" id="chlamydia-doxycycline-date" name="chlamydia-doxycycline-date">
+                    </label>
                 </td>
                 <td>    
-                    <label>Alternative Treatment Regimens</label>
+                    <label>Alternative Treatment Regimens:
                     <div class="checkbox-group">
                     <input type="checkbox" id="chlamydia-amoxicillin" name="chlamydia-treatment" value="amoxicillin">
                     <label for="chlamydia-amoxicillin">Amoxicillin 500mg orally tid X 7 days</label>
                     </div>
+                    <label for="chlamydia-amoxicillin-date">Date</label>
                     <input type="date" id="chlamydia-amoxicillin-date" name="chlamydia-amoxicillin-date">
+                    </label>
                 </td>
                 <td>   
                     <div class="checkbox-group">
@@ -355,39 +404,44 @@
             </tr>  
             <tr>
                 <th>8.</th>
-                <td><label for="patientinfection">IF NOT TREATED YET — PATIENT NOTIFIED OF INFECTION: </label>
+                <td>
+                    <label>IF NOT TREATED YET — PATIENT NOTIFIED OF INFECTION: 
                     <div class="radio-group">
                     <input type="radio" name="patientinfection" id="patientinfection-yes" value="yes" required>
                     <label for="patientinfection-yes">Yes</label>
                     <input type="radio" name="patientinfection" id="patientinfection-no" value="no" required>
                     <label for="patientinfection-no">No</label>
                     </div>
+                    </label>
                 </td>
                 
-                <td><label for="assistance">Does the provider need assistance in contacting a client that has not responded for treatment?</label>
+                <td><label>Does the provider need assistance in contacting a client that has not responded for treatment?
                     <div class="radio-group">
                     <input type="radio" name="assistance" id="assistance-yes" value="yes" required>
                     <label for="assistance-yes">Yes</label>
                     <input type="radio" name="assistance" id="assistance-no" value="no" required>
                     <label for="assistance-no">No</label>
                     </div>
+                    </label>
                 </td>
             </tr>  
             <tr>
                 <th>9.</th>
-                <td><label for="">PARTNER MANAGEMENT PLAN — Ensuring Partner Treatment</label></td>
+                <td>PARTNER MANAGEMENT PLAN — Ensuring Partner Treatment</td>
                 <td colspan="4">
                     <div class="radio-group">
-                        <label for="ept-dispensed">Expedited Partner Therapy dispensed at time of visit?</label>
-                         <input type="radio" name="ept-dispensed" id="ept-dispensed-no" value="no" required >
-                         <label for="ept-dispensed-no">No</label>
-                         <input type="radio" name="ept-dispensed" id="ept-dispensed-yes" value="yes" required>
-                         <label for="ept-dispensed-yes">Yes</label>
+                        Expedited Partner Therapy dispensed at time of visit?
+                        <input type="radio" name="ept-dispensed" id="ept-dispensed-no" value="no" required >
+                        <label for="ept-dispensed-no">No</label>
+                        <input type="radio" name="ept-dispensed" id="ept-dispensed-yes" value="yes" required>
+                        <label for="ept-dispensed-yes">Yes</label>
                     </div>
-                        <label for="ept-partners">How many partners?</label>    
+                    <div>
+                        <label for="ept-partners">How many partners?  </label>
                         <input type="number" name="ept-partners" id="ept-partners" min="0" required>
                         <p>(See: OHA/STD Prevention for EPT guidelines and policy) <a href="#">Prevention for EPT guidelines and policy</a></p>
                         <p>When resources allow the health department will be contacting gonorrhea cases and high-risk chlamydia cases to offer partner services. Please notify the patient that a public health worker may be contacting them to offer partner services.</p>
+                    </div>
                 </td>
                 <td>
                     <div class="checkbox-group">
@@ -395,18 +449,18 @@
                         <label for="no-contact">PROVIDER REQUESTS THAT CLIENT NOT BE CONTACTED BY PUBLIC HEALTH/PROVIDER WILL ASSURE PARTNER TREATMENT</label>
                     </div>       
                 </td>
-                </tr>
-                <tr>
+            </tr>
+            <tr>
                     <th></th>
-                    <td> <label>CURRENT RECOMMENDED TREATMENT</label>                  
+                    <td> CURRENT RECOMMENDED TREATMENT                 
                         <p>See CDC Guidelines at: <a href="#">www.cdc.gov/std/treatment/</a></p>
                     </td>
-                </tr>
+            </tr>
 
                 
                 
             </table>
-
+            
 
             <div>
                 
@@ -415,11 +469,11 @@
             </div>
             </div>
 
-            
+            <div id="text"></div>
         </form>
-       </div>
+      </div>
 
-    </div>  
+     </div>  
     </section>
 
     <section class="row">
@@ -430,6 +484,8 @@
         </footer>
     </section>
 
-
+    <script src="../scripts/stiReportingform.js" ></script>
+    
 </body>
 </html>
+

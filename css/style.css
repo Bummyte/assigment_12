@@ -498,3 +498,7 @@ font: italic normal bold 16px Arial, sans-serif;
     text-decoration: none;
     color: white;
 }
+
+span{
+    color:red
+}
