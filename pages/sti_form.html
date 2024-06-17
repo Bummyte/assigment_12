@@ -81,7 +81,7 @@
                 <th>1.</th>
                 <td>
                     <label for="stiname">NAME:</label>
-                    <input type="text" name="stiname" id="stiname" required>
+                    <input type="text" name="stiname" id="stiname" required onblur="return validatename(); ">
                     <span id="nameErr"></span>
                 </td>
                 <td>
@@ -94,48 +94,13 @@
                     <label>Gender:
                     <div class="radio-group">
                     <label for="stiGender-male">Male</label>
-                    <input type="radio" name="stiGender" id="stiGender-male" value="male" required>
-                    </label>
-
-            <div class="col-9">
-                <form action="" method="post" autocomplete="off" name="stiReporting" onsubmit="return validatestiReporting();">
-                    <h2 class="title" >Clinic Information</h2> 
-                        <div>
-                        <table class="first-table">
-                            <tr>
-                                <td><label for="stidate"> Date:</label></td>
-                                <td><input type="date" name="stidate" id="stidate"><span id="stidateErr"></span></td>
-                
-                                <td><label for="hprovider">Health Provider: </label></td>
-                                <td><input type="text" name="hprovider" id="hprovider" placeholder="healthcare provider"><span id="hpErr"></span></td>
-                            </tr>
-                
-                            <tr>
-                                <td><label for="pcf">Person Completing Form:</label></td>
-                                <td><input type="text" name="pcf" id="pcf"><span id="pcfErr"></span></td>
-                
-                                <td><label for="contphone">Contact phone number/fax:</label></td>
-                                <td><input type="number" name="contphone" id="contphone"><span id="contPhoneErr"></span></td>
-                            </tr>
-                        </table>
-                        </div>
-               
-        
-                        <div class="instruction">
-                        <p>Your lab reported a communicable disease on the patient shown below and listed you as the provider. The Oregon Department of Human Services and Washington
-                        County require additional information. The fax cover sheet you have received references Oregon Law (ORS 433) that requires you to report this information.</p>
-                        <p><b>Please complete the form <u>within 24 hours,</u> or by the end of the next working day, and fax it back to our office at 503-846-3644. </b>
-                        If you
-                        prefer you may call to report the required information. We appreciate your cooperation and prompt handling of this confidential report.</p>
-                        </div>
-
-                    
+                    <input type="radio" name="stiGender" id="stiGender-male" value="male" required>                 
                     <label for="stiGender-female">Female</label>
-                    <input type="radio" name="stiGender" id="stiGender-female" value="female" required>
-                    
+                    <input type="radio" name="stiGender" id="stiGender-female" value="female" required>                    
                     <label for="stiGender-other">Other</label>
                     <input type="radio" name="stiGender" id="stiGender-other" value="other" required>
                     <span id="genderErr"></span>
+                    </label>
                     </div>
                 </td>
                 

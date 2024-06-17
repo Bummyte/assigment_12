@@ -1,10 +1,10 @@
 
 
     function validatestiReporting(){
-        let stidate = document.getElementById('stidate').value;
-        let hp = document.getElementById('hprovider').value;        
-        let pcf = document.getElementById('pcf').value;
-        let contpp = document.getElementById('contPhone').value;
+        let stidate = document.forms.stiReporting.stidate.value;
+        let hp = document.forms.stiReporting.hprovider.value;        
+        let pcf = document.forms.stiReporting.pcf.value;
+        let contpp = document.forms.stiReporting.contPhone.value;
         let name = document.forms.stiReporting.stiname.value;
         let dob = document.forms.stiReporting.dob.value;
         let gender = document.forms.stiReporting.stiGender.value;
