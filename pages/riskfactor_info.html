@@ -15,10 +15,72 @@
             <h1> Case Reporting Forms </h1>
             <nav class="topnav">
               <a href="../index.html">Home</a>
-              <a style="float: left;" href="registration.html">Register New Client</a>
               <a href="#">About</a>
             </nav>
         </header>
     </section>
+
+    <section class="row">
+
+    </section>
+
+    <main class="row">
+        <section>
+            <div class="col-3">
+                <nav class="sidenav">
+                    <div><a href="sti_form.html">sti_form</a></div>
+                    <div><a href="hepb_form.html">Hepb_form</a></div>
+                    <div><a href="cong_syphilis.html">cong_syphilis</a></div>
+                    <div><a href="registration.html">Registration.html</a></div>
+                    <div><a href="riskfactor_info.html">Riskfactor.html</a></div>
+                    <div><a href="personalinfo.html">Personalinfo.html</a></div>
+                    <div><a href="../index.html">Home</a></div>
+                </nav>
+            </div>
+        </section>
+
+        <section class="col-9">
+            <h2 style="text-align: center; color: red; margin: 10px; padding: 5px;"> Risk Factor Forms</h2>
+                <p style="text-align: left; color:lightblue; margin: 10px; padding: 5px;">(In the last 12months, drag the options that apply)</p>
+                <div class="risk-container">
+                    <div id="risk1" ondrop="drop(event)" ondragover="allowdrop(event)" ondragenter="dragenter(event)">
+                    <div class="risk-item" id="item1" draggable="true" ondragstart="drag(event)">Had sex with males</div>
+                    <div class="risk-item" id="item2" draggable="true" ondragstart="drag(event)">Had sex with females</div>
+                    <div class="risk-item" id="item3" draggable="true" ondragstart="drag(event)">Victim of sexual assault</div>
+                    <div class="risk-item" id="item3" draggable="true" ondragstart="drag(event)">Homeless</div>
+                    <div class="risk-item" id="item3" draggable="true" ondragstart="drag(event)">Incarcerated</div>
+                    <div class="risk-item" id="item4" draggable="true" ondragstart="drag(event)">Possible exposure</div>
+                    <div class="risk-item" id="item5" draggable="true" ondragstart="drag(event)">Routine screening</div>
+                </div>
+                <div id="risk2" ondrop="drop(event)" ondragover="allowdrop(event)" ondragenter="dragenter(event)"></div>
+                </div>
+        </section>
+
+    </main>
+
+    <script>
+
+        function allowdrop(ev){
+            ev.preventDefault();
+            ev.target.classList.add('dragover');
+        }
+
+        function drag(ev){
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+
+        function drop(ev){
+            ev.preventDefault();
+            ev.target.classList.remove('dragover');
+            ev.target.classList.add('dropped')
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+        function dragenter(ev){
+            ev.target.classList.add('dragenter')
+        }
+    </script>
 </body>
 </html>

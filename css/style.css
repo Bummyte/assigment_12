@@ -502,3 +502,45 @@ font: italic normal bold 16px Arial, sans-serif;
 span{
     color:red
 }
+
+.risk-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+}
+#risk1, #risk2{
+    width: 400px;
+    height: 400px;
+    float: left;
+    border: 2px dotted blue;
+    border-radius: 4px;
+    margin: 30px;
+    
+    
+}
+
+.risk-item{
+    background-color:#ccc;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 5px;
+    color: #4a7ae1;
+    font: italic bold 14px Arial, sans-serif;
+}
+
+.dragover{
+    border: 2px dotted red
+
+}
+
+.dragenter{
+    
+    color: red;
+}
+
+.dropped {
+    background-color: #d0ffd0;
+}
